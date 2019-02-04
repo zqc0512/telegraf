@@ -970,7 +970,8 @@
   version = "v1.2.0"
 
 [[projects]]
-  digest = "1:fc5b65725c192ead1d1274d3a46e271f0415fccbb153cdb15af93a95f68f076a"
+  branch = "master"
+  digest = "1:1c6bdf2b9b331ad0652852ad82d4b7f0019b35e68369b92ecf478bc118e51b96"
   name = "github.com/sgtsquiggs/tail"
   packages = [
     "logger",
@@ -979,8 +980,7 @@
     "watcher",
   ]
   pruneopts = ""
-  revision = "627f0d07f4f816c228751baeaeaf2950b8d5e50f"
-  version = "v1.0.0"
+  revision = "62caa7044e933e5fb4616feaa8b4a8285d049deb"
 
 [[projects]]
   digest = "1:02135a4151567d48ebff6cf36f73b5d8dee566855df84ffd96111d5225848bb7"

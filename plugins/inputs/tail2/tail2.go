@@ -19,14 +19,11 @@ import (
 	"github.com/influxdata/telegraf/plugins/parsers"
 )
 
-const (
-	pollDuration = 250 * time.Millisecond
-)
-
 type Tail struct {
 	Files         []string
 	FromBeginning bool
 	WatchMethod   string
+	PollDuration  time.Duration
 
 	watcher    watcher.Watcher
 	tailer     *tailer.Tailer
@@ -61,6 +58,9 @@ const sampleConfig = `
 
   ## Method used to watch for file updates.  Can be either "inotify" or "poll".
   # watch_method = "inotify"
+
+  ## Poll duration. Used when watch_method is set to "poll".
+  # poll_duration = "250ms"
 
   ## Data format to consume.
   ## Each data format has its own unique set of configuration options, read
@@ -98,7 +98,7 @@ func (t *Tail) Start(acc telegraf.Accumulator) error {
 	}
 
 	var err error
-	t.watcher, err = watcher.NewLogWatcher(pollDuration, !poll)
+	t.watcher, err = watcher.NewLogWatcher(t.PollDuration, !poll)
 	if err != nil {
 		defer close(t.lines)
 		return err
