@@ -9,6 +9,7 @@ import (
 	"sync"
 	"time"
 
+	taillog "github.com/sgtsquiggs/tail/logger"
 	"github.com/sgtsquiggs/tail/logline"
 	"github.com/sgtsquiggs/tail/tailer"
 	"github.com/sgtsquiggs/tail/watcher"
@@ -98,13 +99,13 @@ func (t *Tail) Start(acc telegraf.Accumulator) error {
 	}
 
 	var err error
-	t.watcher, err = watcher.NewLogWatcher(t.PollDuration, !poll)
+	t.watcher, err = watcher.NewLogWatcher(t.PollDuration, !poll, watcher.Logger(taillog.DiscardingLogger))
 	if err != nil {
 		defer close(t.lines)
 		return err
 	}
 
-	var opts []tailer.Option
+	opts := []tailer.Option{tailer.Logger(taillog.DiscardingLogger)}
 	if t.FromBeginning {
 		opts = append(opts, tailer.OneShot)
 	}
