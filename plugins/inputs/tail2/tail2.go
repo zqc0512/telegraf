@@ -1,4 +1,5 @@
 // +build !solaris
+// +build go1.10
 
 package tail2
 
@@ -9,15 +10,14 @@ import (
 	"sync"
 	"time"
 
-	taillog "github.com/sgtsquiggs/tail/logger"
-	"github.com/sgtsquiggs/tail/logline"
-	"github.com/sgtsquiggs/tail/tailer"
-	"github.com/sgtsquiggs/tail/watcher"
-
 	"github.com/influxdata/telegraf"
 	"github.com/influxdata/telegraf/internal/globpath"
 	"github.com/influxdata/telegraf/plugins/inputs"
 	"github.com/influxdata/telegraf/plugins/parsers"
+	taillog "github.com/sgtsquiggs/tail/logger"
+	"github.com/sgtsquiggs/tail/logline"
+	"github.com/sgtsquiggs/tail/tailer"
+	"github.com/sgtsquiggs/tail/watcher"
 )
 
 type Tail struct {
