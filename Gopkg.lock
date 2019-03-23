@@ -404,6 +404,14 @@
   version = "v1.2.0"
 
 [[projects]]
+  digest = "1:eb53021a8aa3f599d29c7102e65026242bdedce998a54837dc67f14b6a97c5fd"
+  name = "github.com/fsnotify/fsnotify"
+  packages = ["."]
+  pruneopts = ""
+  revision = "c2828203cd70a50dcccfb2761f8b1f8ceef9a8e9"
+  version = "v1.4.7"
+
+[[projects]]
   digest = "1:858b7fe7b0f4bc7ef9953926828f2816ea52d01a88d72d1c45bc8c108f23c356"
   name = "github.com/go-ini/ini"
   packages = ["."]
@@ -899,12 +907,12 @@
   version = "v2.0.3"
 
 [[projects]]
-  digest = "1:7365acd48986e205ccb8652cc746f09c8b7876030d53710ea6ef7d0bd0dcd7ca"
+  digest = "1:1d7e1867c49a6dd9856598ef7c3123604ea3daabf5b83f303ff457bcbc410b1d"
   name = "github.com/pkg/errors"
   packages = ["."]
   pruneopts = ""
-  revision = "645ef00459ed84a119197bfb8d8205042c6df63d"
-  version = "v0.8.0"
+  revision = "ba968bfe8b2f7e042a574c888954fccecfa385b4"
+  version = "v0.8.1"
 
 [[projects]]
   digest = "1:256484dbbcd271f9ecebc6795b2df8cad4c458dd0f5fd82a8c2fa0c29f233411"
@@ -982,6 +990,19 @@
   pruneopts = ""
   revision = "f58768cc1a7a7e77a3bd49e98cdd21419399b6a3"
   version = "v1.2.0"
+
+[[projects]]
+  digest = "1:a1225914e8139b1304e9358394e0c6d0ce49ca9e60367331de2ffedebbbd841c"
+  name = "github.com/sgtsquiggs/tail"
+  packages = [
+    "logger",
+    "logline",
+    "tailer",
+    "watcher",
+  ]
+  pruneopts = ""
+  revision = "03e9ae54be6ec1c0540d94cc7d82e0240d4fa22f"
+  version = "v1.0.3"
 
 [[projects]]
   digest = "1:d77a85cf43b70ae61fa2543d402d782b40dca0f5f41413839b5f916782b0fab9"
@@ -1202,7 +1223,6 @@
   ]
   pruneopts = ""
   revision = "a2144134853fc9a27a7b1e3eb4f19f1a76df13c9"
-  source = "https://github.com/golang/crypto.git"
 
 [[projects]]
   branch = "master"
@@ -1231,7 +1251,6 @@
   ]
   pruneopts = ""
   revision = "a680a1efc54dd51c040b3b5ce4939ea3cf2ea0d1"
-  source = "https://github.com/golang/net.git"
 
 [[projects]]
   branch = "master"
@@ -1247,7 +1266,6 @@
   ]
   pruneopts = ""
   revision = "d2e6202438beef2727060aa7cabdd924d92ebfd9"
-  source = "https://github.com/golang/oauth2.git"
 
 [[projects]]
   branch = "master"
@@ -1259,7 +1277,6 @@
   ]
   pruneopts = ""
   revision = "42b317875d0fa942474b76e1b46a6060d720ae6e"
-  source = "https://github.com/golang/sync.git"
 
 [[projects]]
   branch = "master"
@@ -1276,7 +1293,6 @@
   ]
   pruneopts = ""
   revision = "7c4c994c65f702f41ed7d6620a2cb34107576a77"
-  source = "https://github.com/golang/sys.git"
 
 [[projects]]
   digest = "1:5acd3512b047305d49e8763eef7ba423901e85d5dd2fd1e71778a0ea8de10bd4"
@@ -1312,7 +1328,6 @@
   pruneopts = ""
   revision = "f21a4dfb5e38f5895301dc265a8def02365cc3d0"
   version = "v0.3.0"
-  source = "https://github.com/golang/text.git"
 
 [[projects]]
   branch = "master"
@@ -1589,6 +1604,10 @@
     "github.com/prometheus/client_model/go",
     "github.com/prometheus/common/expfmt",
     "github.com/satori/go.uuid",
+    "github.com/sgtsquiggs/tail/logger",
+    "github.com/sgtsquiggs/tail/logline",
+    "github.com/sgtsquiggs/tail/tailer",
+    "github.com/sgtsquiggs/tail/watcher",
     "github.com/shirou/gopsutil/cpu",
     "github.com/shirou/gopsutil/disk",
     "github.com/shirou/gopsutil/host",
